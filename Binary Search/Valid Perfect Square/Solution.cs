@@ -1,6 +1,7 @@
 public class Solution {
     public bool IsPerfectSquare(int num) 
     {
+        //using binary search method
         if(num == 1) return true;
         int low = 1;
         int high = num/2;
