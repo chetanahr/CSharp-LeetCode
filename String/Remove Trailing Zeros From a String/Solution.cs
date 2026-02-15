@@ -1,14 +1,12 @@
 public class Solution {
     public string RemoveTrailingZeros(string num) 
     {
-        string s = "";
-        bool x = false;
-        for(int i = num.Length-1; i>=0; i--)
+        List<char> s = num.ToList();
+        while(s.Last() == '0')
         {
-            if(num[i]!='0') x = true;
-            if(x) s += num[i];
+            s.RemoveAt(s.Count -1 );
         }
-        string reversed = new string(s.Reverse().ToArray());
-        return reversed;
+        string result = new string(s.ToArray());
+        return result;
     }
 }
