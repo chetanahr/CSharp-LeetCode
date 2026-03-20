@@ -16,5 +16,6 @@ public class Solution {
             }
         }
         return total;
+        //You can simply return n-1, but this code computes the value.
     }
 }
