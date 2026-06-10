@@ -1,7 +1,11 @@
 public class Solution {
     public int NumberOfEmployeesWhoMetTarget(int[] hours, int target) 
     {
-        var x = hours.Where(c => c >= target);
-        return x.Count();
+        int x = 0;
+        foreach(int i in hours)
+        {
+            if(i >= target) x++;
+        }
+        return x;
     }
 }
